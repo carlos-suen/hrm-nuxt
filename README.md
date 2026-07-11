@@ -6,6 +6,8 @@
 
 現代化全棧 Web 應用，採用 Nuxt 3 + Vue 3 + TypeScript 構建，整合 Supabase 後端服務。
 
+**狀態**：該項目仍在開發中，已部署至 Cloudflare Pages。
+
 ## 技術棧
 
 ### 前端框架
@@ -128,53 +130,6 @@ npm run generate         # 靜態站點生成
 ### API 安全
 - **服務端 API 路由** — 敏感操作在服務端執行
 - **Supabase Service Role** — 服務端專用金鑰，客戶端無法存取
-
-## 數據流
-
-```
-用戶操作 → Vue 組件 → Composable (useApi)
-    ↓
-Pinia Store (authStore) ← JWT Token
-    ↓
-Nuxt Server API (server/api/*)
-    ↓
-Supabase Client (server/utils/supabase.ts)
-    ↓
-PostgreSQL Database
-```
-
-## 開發規範
-
-### TypeScript 嚴格模式
-- 型別定義集中在 `app/types.ts`
-- 所有 API 回應型別化
-- 組件 Props 型別檢查
-
-### 組件設計
-- **功能性組件** — `AddCourseForm.vue`, `EditEmployeeForm.vue`
-- **展示組件** — `DataCard.vue`, `ChartCard.vue`
-- **通用組件** — `CommonButton.vue`, `EmptyHolder.vue`
-
-### API 封裝
-- `useApi` composable 統一封裝 HTTP 請求
-- 錯誤處理與重試邏輯集中管理
-- 請求/回應攔截器（JWT 附加）
-
-## 未來優化方向
-
-- [ ] 整合 CI/CD 流水線（GitHub Actions / GitLab CI）
-- [ ] Docker 容器化部署
-- [ ] 單元測試覆蓋（Vitest）
-- [ ] E2E 測試（Playwright）
-- [ ] 效能監控（Core Web Vitals）
-- [ ] 國際化支援（i18n）
-
-## 技術債與改進
-
-- `nuxt.config.ts` 中 JWT Secret 預設值不應用於生產環境（已標註）
-- 部分組件可進一步拆分為更細粒度的展示組件
-- API 錯誤處理需統一錯誤碼與用戶提示
-- 圖表配置可抽取為獨立 composable
 
 ---
 
