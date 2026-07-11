@@ -1,0 +1,37 @@
+{
+  "name": "hrm-nuxt",
+  "type": "module",
+  "private": true,
+  "scripts": {
+    "build": "nuxt build",
+    "dev": "nuxt dev",
+    "generate": "nuxt generate",
+    "preview": "nuxt preview",
+    "postinstall": "nuxt prepare",
+    "lint": "eslint .",
+    "typecheck": "nuxt typecheck"
+  },
+  "dependencies": {
+    "@supabase/supabase-js": "^2.106.2",
+    "bcryptjs": "^3.0.3",
+    "echarts": "^5.6.0",
+    "jsonwebtoken": "^9.0.3",
+    "nuxt": "^4.4.8",
+    "pinia": "^3.0.4",
+    "vue": "^3.5.39",
+    "vue-echarts": "^7.0.3",
+    "vue-router": "^5.1.0"
+  },
+  "devDependencies": {
+    "@nuxt/eslint": "^1.9.0",
+    "@pinia/nuxt": "^0.11.2",
+    "@tailwindcss/vite": "^4.3.2",
+    "@types/bcryptjs": "^2.4.6",
+    "@types/jsonwebtoken": "^9.0.10",
+    "@types/node": "^24.13.2",
+    "hono": "^4.12.23",
+    "tailwindcss": "^4.3.0",
+    "typescript": "~6.0.0",
+    "vue-tsc": "^3.3.6"
+  }
+}
