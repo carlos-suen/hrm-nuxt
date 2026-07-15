@@ -40,6 +40,62 @@
 - **vue-tsc** — Vue TypeScript 類型檢查
 - **Hono 4.12** — 輕量級服務端框架（開發環境）
 
+## 功能預覽
+
+以下是系統主要模組的界面預覽：
+
+### 數據大盤
+
+![數據大盤](screenshots/dashboard/image.png)
+
+### 員工名錄
+
+![員工名錄](screenshots/employees/image.png)
+
+### 考勤管理
+
+![考勤管理](screenshots/attendance/image.png)
+
+### 請假審批
+
+![請假審批](screenshots/approvals/image.png)
+
+### 薪資管理
+
+![薪資管理](screenshots/payroll/image.png)
+
+### 績效管理
+
+![績效管理](screenshots/performance/image.png)
+
+### 招聘管理
+
+![招聘管理](screenshots/recruitment/image.png)
+
+### 培訓管理
+
+![培訓管理](screenshots/training/image.png)
+
+### 報表中心
+
+![報表中心](screenshots/reports/image.png)
+
+### 通知中心
+
+![通知中心](screenshots/notification/image.png)
+
+### 系統設置
+
+![系統設置](screenshots/system_settings/image.png)
+
+### 註冊頁面
+
+![註冊頁面](screenshots/auth/image%20copy.png)
+
+### 其他
+
+![其他](screenshots/others/image.png)
+
 ## 架構
 
 採用 Nuxt 3 混合渲染架構，服務端與客戶端職責清晰分離：
