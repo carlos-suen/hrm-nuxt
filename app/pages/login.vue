@@ -104,19 +104,21 @@ definePageMeta({
           class="w-full px-3 py-2 border border-slate-300 rounded-lg text-sm focus:outline-none focus:border-blue-500"
         />
 
+        <p class="text-sm text-red-500 text-center">帳號:admin1, 密碼:111111</p>
+
         <p v-if="error" class="text-sm text-red-500 text-center">{{ error }}</p>
 
         <button
           type="submit"
           :disabled="loading"
-          class="w-full py-2 bg-blue-500 hover:bg-blue-600 disabled:bg-blue-300 text-white text-sm font-medium rounded-lg transition-colors"
+          class="w-full py-2 bg-red-500 hover:bg-red-600 disabled:bg-red-300 text-white text-sm font-medium rounded-lg transition-colors"
         >
           {{ loading ? '處理中...' : isRegister() ? '註冊' : '登錄' }}
         </button>
       </form>
 
       <div class="flex justify-center gap-4 mt-4">
-        <button type="button" class="text-sm text-blue-500 hover:underline" @click="switchMode">
+        <button type="button" class="text-sm text-red-500 hover:underline" @click="switchMode">
           {{ isRegister() ? '返回登錄' : '註冊用戶' }}
         </button>
         <button

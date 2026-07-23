@@ -8,6 +8,8 @@
 
 **狀態**：該項目仍在開發中，已部署至 Cloudflare Pages。
 
+**演示地址**：https://hrm-nuxt.hammersuen2002.workers.dev/login
+
 ## 技術棧
 
 ### 前端框架
