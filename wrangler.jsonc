@@ -1,0 +1,30 @@
+{
+  "$schema": "node_modules/wrangler/config-schema.json",
+  "name": "hrm-nuxt",
+  "compatibility_date": "2026-07-23",
+  "observability": {
+    "enabled": true
+  },
+  "main": "./.output/server/index.mjs",
+  "assets": {
+    "binding": "ASSETS",
+    "directory": "./.output/public/"
+  },
+  "compatibility_flags": [
+    "nodejs_compat"
+  ]
+}
+
+// 敏感變數通過 Cloudflare Dashboard 或 wrangler secret 管理
+// Cloudflare Dashboard: Workers & Pages → hrm-nuxt → Settings → Variables and Secrets
+// 必須設置以下環境變數 (使用 "Secret" 類型):
+// - SUPABASE_URL
+// - SUPABASE_SERVICE_ROLE_KEY
+// - SUPABASE_ANON_KEY
+// - JWT_SECRET
+//
+// CLI 命令:
+// wrangler secret put SUPABASE_URL
+// wrangler secret put SUPABASE_SERVICE_ROLE_KEY
+// wrangler secret put SUPABASE_ANON_KEY
+// wrangler secret put JWT_SECRET

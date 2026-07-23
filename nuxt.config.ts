@@ -24,14 +24,26 @@ export default defineNuxtConfig({
 
     runtimeConfig: {
         // Server-side private config
-        supabaseUrl: process.env.SUPABASE_URL,
-        supabaseServiceRoleKey: process.env.SUPABASE_SERVICE_ROLE_KEY,
+        supabaseUrl: process.env.SUPABASE_URL || '',
+        supabaseServiceRoleKey: process.env.SUPABASE_SERVICE_ROLE_KEY || '',
         jwtSecret: process.env.JWT_SECRET || 'dev-only-secret-do-not-use-in-production',
 
         // Public config (exposed to client)
         public: {
-            supabaseUrl: process.env.SUPABASE_URL,
-            supabaseAnonKey: process.env.SUPABASE_ANON_KEY,
+            supabaseUrl: process.env.SUPABASE_URL || '',
+            supabaseAnonKey: process.env.SUPABASE_ANON_KEY || '',
+        },
+    },
+
+    // Nitro 配置 - Cloudflare Workers 環境變數綁定
+    nitro: {
+        preset: 'cloudflare-module',
+        cloudflare: {
+            pages: {
+                routes: {
+                    exclude: ['/images/*', '/favicon.ico', '/robots.txt']
+                }
+            }
         },
     },
 

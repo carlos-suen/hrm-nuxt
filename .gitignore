@@ -6,6 +6,9 @@
 .cache
 dist
 
+# Cloudflare Workers
+.wrangler
+
 # Node dependencies
 node_modules
 
@@ -22,3 +25,4 @@ logs
 .env
 .env.*
 !.env.example
+!.dev.vars.example
